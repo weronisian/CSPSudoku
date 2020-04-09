@@ -10,14 +10,21 @@ public class CSP {
         sudoku.display();
 
 //        new SolveSudokuBacktracking(sudoku, new SelectNextVariable(), new SelectNextValue());
-//        new SolveSudokuBacktracking(sudoku, new SelectNextVariable(), new SelectMostInDomainsValue());
+        new SolveSudokuBacktracking(sudoku, new SelectNextVariable(), new SelectMostInDomainsValue());
 //        new SolveSudokuBacktracking(sudoku, new SelectMostLimitedVariable(), new SelectNextValue());
 //        new SolveSudokuBacktracking(sudoku, new SelectMostLimitedVariable(), new SelectMostInDomainsValue());
 
-        new SolveSudokuForward(sudoku, new SelectNextVariable(), new SelectNextValue());
+//        new SolveSudokuBacktracking(sudoku, new SelectInSquareVariable(), new SelectNextValue());
+        new SolveSudokuBacktracking(sudoku, new SelectInSquareVariable(), new SelectMostInDomainsValue());
+//        new SolveSudokuBacktracking(sudoku, new SelectInSquareVariable(), new SelectMostInDomainsValue());
+
+
+//        new SolveSudokuForward(sudoku, new SelectNextVariable(), new SelectNextValue());
         new SolveSudokuForward(sudoku, new SelectNextVariable(), new SelectMostInDomainsValue());
-        new SolveSudokuForward(sudoku, new SelectMostLimitedVariable(), new SelectNextValue());
-        new SolveSudokuForward(sudoku, new SelectMostLimitedVariable(), new SelectMostInDomainsValue());
+//        new SolveSudokuForward(sudoku, new SelectMostLimitedVariable(), new SelectNextValue());
+//        new SolveSudokuForward(sudoku, new SelectMostLimitedVariable(), new SelectMostInDomainsValue());
+
+        new SolveSudokuForward(sudoku, new SelectInSquareVariable(), new SelectMostInDomainsValue());
 
 
 
