@@ -19,18 +19,11 @@ public class SelectInSquareVariable implements VariableHeuristic {
             }
         }
 
-        //
-//        for (int i = 0; i < count.length; i++) {
-//            for (int j = 0; j < count[0].length; j++) {
-//                System.out.print(count[i][j] + " ");
-//            }
-//        }
-//        System.out.println("minCount: " + minCount);
-//        System.out.println("min i: " + min_i + "min j: " + min_j);
-
+        // that means there are no empty squares
         if(minCount == Sudoku.SUDOKU_SIZE + 1)
             return temp;
 
+        // check next empty variable in square where is the least empties fields
         for(int i=0; i<Sudoku.SQUARE_SIZE; i++){
             for(int j=0; j<Sudoku.SQUARE_SIZE; j++) {
                 if(sudoku.getVariables()[min_i * 3 + i][min_j * 3 + j].value == '0') {

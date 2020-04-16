@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class SelectRandomValue implements ValueHeuristic {
+
+    // return random order of values from domain
     @Override
     public ArrayList<Character> selectValue(Sudoku sudoku, int row, int col) {
         ArrayList<Character> temp = new ArrayList<>();
@@ -19,11 +21,6 @@ public class SelectRandomValue implements ValueHeuristic {
             }
             temp.set(rand, sudoku.getVariables()[row][col].domain.get(a));
         }
-
-//        for(int a=0; a<temp.size(); a++) {
-//            System.out.print(temp.get(a) + ", ");
-//        }
-//        System.out.println();
         return temp;
     }
 }
